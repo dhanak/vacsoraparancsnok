@@ -16,4 +16,7 @@ bárki könnyűszerrel testre szabhatja őket!
 
 A [Vacsoraparancsnok][] megmenti az estéd! 😍🥐
 
+<img src="vacsoraparancsnok.jpg" width="300"
+ style="display:block; margin: 10px auto;">
+
 [Vacsoraparancsnok]: https://dhanak.github.io/vacsoraparancsnok
