@@ -36,6 +36,18 @@
       #labels label {
           margin: 10px auto;
       }
+      #labels input {
+          display: none;
+      }
+      #labels input ~ span {
+          padding: 5px 10px;
+      }
+      #labels input:checked ~ span {
+          border: 1px solid indigo;
+          border-radius: 5px;
+          padding: 4px 9px;
+          background: lavender;
+      }
       #buttons {
           width: 100%;
           display: grid;
@@ -49,7 +61,7 @@
           margin: 10px auto;
       }
       #config {
-          position: absolute;
+          position: fixed;
           top: 20px;
           left: 20px;
           right: 20px;
@@ -137,7 +149,8 @@
 
       function populate() {
           var labels = children.map(
-              name => `<label><input type="radio" name="child" value="${name}">${name}</label>`
+              name => `<label><input type="radio" name="child" ` +
+                  `value="${name}"><span>${name}</span></label>`
           ).join('');
           document.getElementById('labels').innerHTML = labels;
           document.querySelector('#labels input').checked = true;
