@@ -187,7 +187,7 @@
       function acceptConfig() {
           children = labelsEditor.value.trim().split(/\s+/);
           commands = buttonsEditor.value.split('\n').
-              filter(s => s.trim() != '');
+              map(s => s.trim()).filter(s => s != '');
           storeData('children', children);
           storeData('commands', commands);
           configWindow.style.visibility = 'hidden';
