@@ -126,12 +126,13 @@
       }
 
       function fetchData(key) {
-          var stored = window.localStorage.getItem(key);
+          var stored = window.localStorage.getItem(`dinnercommander/${key}`);
           return stored && JSON.parse(stored);
       }
 
       function storeData(key, value) {
-          window.localStorage.setItem(key, JSON.stringify(value));
+          window.localStorage.setItem(`dinnercommander/${key}`,
+                                      JSON.stringify(value));
       }
 
       function populate() {
