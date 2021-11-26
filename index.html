@@ -125,24 +125,16 @@
           window.speechSynthesis.speak(utter);
       }
 
-      function setCookie(cname, cvalue) {
-          document.cookie =
-              cname + '=' + encodeURIComponent(cvalue) + ';secure';
+      function fetchData(key) {
+          var stored = window.localStorage.getItem(key);
+          return stored && JSON.parse(stored);
       }
 
-      function getCookie(cname) {
-          var name = cname + '=';
-          var c = document.cookie.split(';').map(c => c.trim()).find(
-              c => c.startsWith(name));
-          return c ?
-              decodeURIComponent(c.substring(name.length)) :
-              undefined;
+      function storeData(key, value) {
+          window.localStorage.setItem(key, JSON.stringify(value));
       }
 
       function populate() {
-          setCookie('children', children.join(' '));
-          setCookie('commands', commands.join('\n'));
-
           var labels = children.map(
               name => `<label><input type="radio" name="child" value="${name}">${name}</label>`
           ).join('');
@@ -167,6 +159,7 @@
       var configWindow = document.getElementById('config');
       var labelsEditor = document.getElementById('labels-editor');
       var buttonsEditor = document.getElementById('buttons-editor');
+
       function configure() {
           labelsEditor.value = children.join(' ');
           buttonsEditor.value = commands.join('\n');
@@ -179,20 +172,16 @@
 
       function acceptConfig() {
           children = labelsEditor.value.trim().split(/\s+/);
-          commands = buttonsEditor.value.split('\n').filter(s => s.trim() != '');
+          commands = buttonsEditor.value.split('\n').
+              filter(s => s.trim() != '');
+          storeData('children', children);
+          storeData('commands', commands);
           configWindow.style.visibility = 'hidden';
           populate();
       }
 
-      var children_cookie = getCookie('children');
-      if (children_cookie) {
-          children = children_cookie.split(' ');
-      }
-
-      var commands_cookie = getCookie('commands');
-      if (commands_cookie) {
-          commands = commands_cookie.split('\n');
-      }
+      children = fetchData('children') || children;
+      commands = fetchData('commands') || commands;
 
       populate();
     </script>
