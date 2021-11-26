@@ -10,13 +10,16 @@ bluetooth-os kihangosítóra, válaszd ki a renitens gyermek nevét, majd nyomd 
 a helyzetnek megfelelő helyreutasító gombot, és hallgasd elégedetten, hogy a
 telefonod beszédszintetizátora rendre inti a gyerekedet, miközben nem emeli fel
 a hangját, nem veszti el a türelmét, nem jön ki a sodrából. Te meg falatozhatsz
-tovább nyugodtan. Az sem baj, ha a te gyerekeidet másképp hívják, vagy más
-dolgok miatt kell rájuk szólni: a HTML kód vonatkozó részei magukért beszélnek,
-bárki könnyűszerrel testre szabhatja őket!
+tovább nyugodtan.
+
+Az sem baj, ha a te gyerekeidet másképp hívják, vagy más dolgok miatt kell rájuk
+szólni: a 2.0-ás változatban már arra is lehetőséged van, hogy magából az
+alkalmazásból beállítsd a neveket és a helyreutasítások szövegét. A
+beállításaidat az oldal sütikben tárolja, így a legközelebbi betöltéskor is
+megmaradnak.
 
 A [Vacsoraparancsnok][] megmenti az estéd! 😍🥐
 
-<img src="vacsoraparancsnok.jpg" width="300"
- style="display:block; margin: 10px auto;">
+<img src="screenshots.png" width="700" style="display:block; margin: 10px auto;">
 
 [Vacsoraparancsnok]: https://dhanak.github.io/vacsoraparancsnok
