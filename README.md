@@ -1,5 +1,7 @@
 ---
 permalink: README.html
+name: Vacsoraparancsnok
+title: null
 ---
 
 # Vacsoraparancsnok
