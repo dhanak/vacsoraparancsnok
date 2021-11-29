@@ -1,3 +1,7 @@
+---
+permalink: README.html
+---
+
 # Vacsoraparancsnok
 
 Eleged lett abból, hogy a gyerekeid vacsora közben nem tudnak viselkedni? Hogy
