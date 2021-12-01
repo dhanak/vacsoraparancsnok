@@ -25,4 +25,4 @@ A [Vacsoraparancsnok][] megmenti az estéd! 😍🥐
 
 <img src="screenshots.png" width="700" style="display:block; margin: 10px auto;">
 
-[Vacsoraparancsnok]: https://dhanak.github.io/vacsoraparancsnok
+[Vacsoraparancsnok]: https://dev.vidga.hu/vacsoraparancsnok
